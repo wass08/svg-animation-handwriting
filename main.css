@@ -1,0 +1,82 @@
+/*
+** BACKGROUND
+*/
+
+* {
+  margin:0;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+}
+
+body {
+  min-height: calc(100vh - 64px);
+  padding: 32px;
+  background-color: #D9AFD9;
+  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 42px;
+}
+
+
+.cheque {
+  padding:32px 32px 0 32px;
+  width: 500px;
+  background-color: white;
+  border-radius:4px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-bottom: solid 42px #ececec;
+  max-width: 100%;
+}
+
+.cheque__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cheque__logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.cheque__content {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+
+.cheque__right {
+  text-align: right;
+}
+
+.cheque__amount {
+  font-weight: bold;
+  font-size: 24px;
+}
+.cheque__signature {
+  margin-top:8px;
+}
+
+/*
+** TUTO
+*/
+
+#signature {
+  stroke-dasharray: 1257px;
+  stroke-dashoffset: 1257px;
+  animation-name: sign;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sign {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
